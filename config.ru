@@ -1,3 +1,3 @@
 require './app'
 
-run Ninjago
+Ninjago.run!
