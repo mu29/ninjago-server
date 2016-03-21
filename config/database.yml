@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql
+  encoding: UTF8
+  pool: 10
+
+development:
+  <<: *default
+  database: ninjago
+  host: localhost
+  username: root
+  password: <%= ENV['NINJAGO_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: ninjago_production
+  host: localhost
+  username: root
+  password: <%= ENV['NINJAGO_DATABASE_PASSWORD'] %>
